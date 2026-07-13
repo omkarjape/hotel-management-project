@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Status</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+width:90%;
+max-width:700px;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+h1{
+text-align:center;
+color:#ff6b35;
+margin-bottom:10px;
+}
+
+.order-id{
+text-align:center;
+color:#666;
+margin-bottom:35px;
+}
+
+.timeline{
+position:relative;
+margin-left:20px;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:14px;
+top:0;
+width:4px;
+height:100%;
+background:#ddd;
+}
+
+.step{
+display:flex;
+align-items:center;
+margin-bottom:35px;
+position:relative;
+}
+
+.circle{
+width:32px;
+height:32px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:bold;
+margin-right:20px;
+z-index:1;
+}
+
+.done{
+background:#28a745;
+color:white;
+}
+
+.current{
+background:#ffc107;
+color:black;
+}
+
+.pending{
+background:#ddd;
+color:#777;
+}
+
+.info h3{
+margin-bottom:5px;
+}
+
+.info p{
+color:#777;
+font-size:14px;
+}
+
+.box{
+margin-top:40px;
+padding:20px;
+background:#fff4ef;
+border-left:5px solid #ff6b35;
+border-radius:10px;
+}
+
+.box h2{
+color:#ff6b35;
+margin-bottom:10px;
+}
+
+.btn{
+display:block;
+width:220px;
+margin:35px auto 0;
+text-align:center;
+padding:14px;
+background:#ff6b35;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e85a26;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍽 Order Tracking</h1>
+
+<p class="order-id">
+Order ID : <strong>#ORD1025</strong><br>
+Table No : <strong>05</strong>
+</p>
+
+<div class="timeline">
+
+<div class="step">
+<div class="circle done">✓</div>
+
+<div class="info">
+<h3>Order Received</h3>
+<p>Your order has been placed successfully.</p>
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="circle done">✓</div>
+
+<div class="info">
+<h3>Kitchen Accepted</h3>
+<p>The chef has accepted your order.</p>
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="circle current">⏳</div>
+
+<div class="info">
+<h3>Preparing Food</h3>
+<p>Your delicious meal is being prepared.</p>
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="circle pending">•</div>
+
+<div class="info">
+<h3>Ready to Serve</h3>
+<p>Waiting for kitchen completion.</p>
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="circle pending">•</div>
+
+<div class="info">
+<h3>Delivered</h3>
+<p>Waiter will deliver your food shortly.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="box">
+
+<h2>Estimated Time</h2>
+
+<h3>12 Minutes</h3>
+
+<p>
+Please relax while our chefs prepare your fresh meal.
+</p>
+
+</div>
+
+<a href="bill.html" class="btn">
+View Bill Demo
+</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Counter Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f6fa;
+}
+
+/* Header */
+
+header{
+background:#222831;
+color:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:28px;
+}
+
+.profile{
+background:#ff6b35;
+padding:10px 18px;
+border-radius:30px;
+font-weight:600;
+}
+
+/* Dashboard Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:#777;
+margin-bottom:10px;
+}
+
+.card h1{
+color:#ff6b35;
+font-size:34px;
+}
+
+/* Table Section */
+
+.section{
+padding:0 30px 30px;
+}
+
+.section h2{
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+border-radius:12px;
+overflow:hidden;
+}
+
+th{
+background:#ff6b35;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+.status{
+padding:6px 12px;
+border-radius:20px;
+color:white;
+font-size:14px;
+font-weight:600;
+}
+
+.preparing{
+background:#ff9800;
+}
+
+.ready{
+background:#28a745;
+}
+
+.completed{
+background:#2196f3;
+}
+
+.bill-btn{
+background:#ff6b35;
+color:white;
+padding:8px 18px;
+text-decoration:none;
+border-radius:6px;
+}
+
+.bill-btn:hover{
+background:#e65a26;
+}
+
+/* Table Status */
+
+.tables{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.table-card{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.available{
+color:#28a745;
+font-weight:bold;
+}
+
+.occupied{
+color:#ff9800;
+font-weight:bold;
+}
+
+.reserved{
+color:#e53935;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>💼 Counter Dashboard</h2>
+
+<div class="profile">
+Admin
+</div>
+
+</header>
+
+<div class="cards">
+
+<div class="card">
+<h3>Today's Orders</h3>
+<h1>126</h1>
+</div>
+
+<div class="card">
+<h3>Today's Revenue</h3>
+<h1>₹38,560</h1>
+</div>
+
+<div class="card">
+<h3>Occupied Tables</h3>
+<h1>18</h1>
+</div>
+
+<div class="card">
+<h3>Pending Bills</h3>
+<h1>07</h1>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>📋 Live Orders</h2>
+
+<table>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Table</th>
+
+<th>Status</th>
+
+<th>Amount</th>
+
+<th>Bill</th>
+
+</tr>
+
+<tr>
+
+<td>#1025</td>
+
+<td>05</td>
+
+<td><span class="status preparing">Preparing</span></td>
+
+<td>₹845</td>
+
+<td><a href="bill.html" class="bill-btn">Generate</a></td>
+
+</tr>
+
+<tr>
+
+<td>#1026</td>
+
+<td>08</td>
+
+<td><span class="status ready">Ready</span></td>
+
+<td>₹1260</td>
+
+<td><a href="bill.html" class="bill-btn">Generate</a></td>
+
+</tr>
+
+<tr>
+
+<td>#1027</td>
+
+<td>03</td>
+
+<td><span class="status completed">Completed</span></td>
+
+<td>₹590</td>
+
+<td><a href="bill.html" class="bill-btn">Generate</a></td>
+
+</tr>
+
+</table>
+
+<h2 style="margin-top:40px;">🪑 Table Status</h2>
+
+<div class="tables">
+
+<div class="table-card">
+<h3>Table 1</h3>
+<p class="available">Available</p>
+</div>
+
+<div class="table-card">
+<h3>Table 2</h3>
+<p class="occupied">Occupied</p>
+</div>
+
+<div class="table-card">
+<h3>Table 3</h3>
+<p class="reserved">Reserved</p>
+</div>
+
+<div class="table-card">
+<h3>Table 4</h3>
+<p class="occupied">Occupied</p>
+</div>
+
+<div class="table-card">
+<h3>Table 5</h3>
+<p class="occupied">Occupied</p>
+</div>
+
+<div class="table-card">
+<h3>Table 6</h3>
+<p class="available">Available</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Smart Restaurant Ordering System © 2026
+
+</footer>
+
+</body>
+</html>

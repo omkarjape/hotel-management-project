@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restaurant Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f4f4f4;
+}
+
+.menu-header{
+    background:#ff6b35;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.search-box{
+    width:90%;
+    max-width:500px;
+    margin:25px auto;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.menu-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+padding:40px 8%;
+
+}
+
+.food-card{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+transition:.4s;
+
+}
+
+.food-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.food-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.food-info{
+
+padding:20px;
+
+}
+
+.food-info h3{
+
+margin-bottom:10px;
+
+}
+
+.price{
+
+color:#ff6b35;
+
+font-size:22px;
+
+font-weight:700;
+
+margin:10px 0;
+
+}
+
+.rating{
+
+color:gold;
+
+margin-bottom:15px;
+
+}
+
+.add-btn{
+
+display:block;
+
+width:100%;
+
+padding:12px;
+
+background:#ff6b35;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.add-btn:hover{
+
+background:#e85a26;
+
+}
+
+.cart{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#222831;
+
+color:white;
+
+padding:20px;
+
+border-radius:15px;
+
+width:260px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.cart h3{
+
+margin-bottom:10px;
+
+}
+
+.checkout{
+
+display:block;
+
+text-align:center;
+
+margin-top:15px;
+
+background:#ff6b35;
+
+padding:12px;
+
+border-radius:8px;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu-header">
+
+<h1>🍽 Digital Menu</h1>
+
+<p>Table No : 05</p>
+
+</div>
+
+<div class="search-box">
+
+<input type="text" placeholder="Search Food...">
+
+</div>
+
+<div class="menu-grid">
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700">
+
+<div class="food-info">
+
+<h3>Margherita Pizza</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">₹249</div>
+
+<button class="add-btn">Add to Cart</button>
+
+</div>
+
+</div>
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700">
+
+<div class="food-info">
+
+<h3>Cheese Burger</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">₹179</div>
+
+<button class="add-btn">Add to Cart</button>
+
+</div>
+
+</div>
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=700">
+
+<div class="food-info">
+
+<h3>White Pasta</h3>
+
+<div class="rating">★★★★☆</div>
+
+<div class="price">₹229</div>
+
+<button class="add-btn">Add to Cart</button>
+
+</div>
+
+</div>
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700">
+
+<div class="food-info">
+
+<h3>Cold Coffee</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">₹99</div>
+
+<button class="add-btn">Add to Cart</button>
+
+</div>
+
+</div>
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700">
+
+<div class="food-info">
+
+<h3>Veg Salad</h3>
+
+<div class="rating">★★★★☆</div>
+
+<div class="price">₹149</div>
+
+<button class="add-btn">Add to Cart</button>
+
+</div>
+
+</div>
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1604908554027-5f1f65d2c5f4?w=700">
+
+<div class="food-info">
+
+<h3>Paneer Tikka</h3>
+
+<div class="rating">★★★★★</div>
+
+<div class="price">₹299</div>
+
+<button class="add-btn">Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cart">
+
+<h3>🛒 Cart</h3>
+
+<p>Pizza × 2</p>
+
+<p>Burger × 1</p>
+
+<p>Coffee × 2</p>
+
+<hr>
+
+<h2>Total ₹875</h2>
+
+<a href="cart.html" class="checkout">
+    
+Place Order
+
+</a>
+
+</div>
+
+</body>
+
+</html>

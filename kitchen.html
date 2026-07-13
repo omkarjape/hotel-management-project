@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kitchen Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f5f9;
+}
+
+/* Header */
+
+header{
+    background:#222831;
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+.live{
+    background:#ff4d4d;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:600;
+}
+
+/* Dashboard */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+/* Order Card */
+
+.card{
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.table{
+    font-size:24px;
+    font-weight:700;
+}
+
+.priority{
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-size:14px;
+}
+
+.high{
+    background:#e53935;
+}
+
+.medium{
+    background:#ff9800;
+}
+
+.low{
+    background:#43a047;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+}
+
+.time{
+    margin:20px 0;
+    color:#666;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    flex:1;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    color:white;
+}
+
+.accept{
+    background:#2196f3;
+}
+
+.prepare{
+    background:#ff9800;
+}
+
+.ready{
+    background:#28a745;
+}
+
+/* Summary */
+
+.summary{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:0 40px 30px;
+}
+
+.box{
+    background:white;
+    text-align:center;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.box h2{
+    color:#ff6b35;
+    margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+.summary{
+grid-template-columns:repeat(2,1fr);
+}
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+👨‍🍳 Kitchen Dashboard
+</div>
+
+<div class="live">
+🔴 LIVE ORDERS
+</div>
+
+</header>
+
+<div class="summary">
+
+<div class="box">
+<h2>12</h2>
+<p>Pending</p>
+</div>
+
+<div class="box">
+<h2>08</h2>
+<p>Preparing</p>
+</div>
+
+<div class="box">
+<h2>05</h2>
+<p>Ready</p>
+</div>
+
+<div class="box">
+<h2>25</h2>
+<p>Total Today</p>
+</div>
+
+</div>
+
+<div class="dashboard">
+
+<!-- Order 1 -->
+
+<div class="card">
+
+<div class="top">
+
+<div class="table">
+Table 05
+</div>
+
+<div class="priority high">
+High
+</div>
+
+</div>
+
+<div class="item">
+<span>Margherita Pizza ×2</span>
+<span>₹498</span>
+</div>
+
+<div class="item">
+<span>Cold Coffee ×2</span>
+<span>₹198</span>
+</div>
+
+<div class="item">
+<span>Garlic Bread ×1</span>
+<span>₹149</span>
+</div>
+
+<div class="time">
+⏱ Ordered 3 Minutes Ago
+</div>
+
+<div class="buttons">
+
+<button class="accept">Accept</button>
+
+<button class="prepare">Preparing</button>
+
+<button class="ready">Ready</button>
+
+</div>
+
+</div>
+
+<!-- Order 2 -->
+
+<div class="card">
+
+<div class="top">
+
+<div class="table">
+Table 08
+</div>
+
+<div class="priority medium">
+Medium
+</div>
+
+</div>
+
+<div class="item">
+<span>Paneer Tikka ×1</span>
+<span>₹299</span>
+</div>
+
+<div class="item">
+<span>Veg Biryani ×2</span>
+<span>₹560</span>
+</div>
+
+<div class="time">
+⏱ Ordered 7 Minutes Ago
+</div>
+
+<div class="buttons">
+
+<button class="accept">Accept</button>
+
+<button class="prepare">Preparing</button>
+
+<button class="ready">Ready</button>
+
+</div>
+
+</div>
+
+<!-- Order 3 -->
+
+<div class="card">
+
+<div class="top">
+
+<div class="table">
+Table 03
+</div>
+
+<div class="priority low">
+Low
+</div>
+
+</div>
+
+<div class="item">
+<span>Cheese Burger ×2</span>
+<span>₹358</span>
+</div>
+
+<div class="item">
+<span>French Fries ×1</span>
+<span>₹120</span>
+</div>
+
+<div class="item">
+<span>Cold Drink ×2</span>
+<span>₹100</span>
+</div>
+
+<div class="time">
+⏱ Ordered 12 Minutes Ago
+</div>
+
+<div class="buttons">
+
+<button class="accept">Accept</button>
+
+<button class="prepare">Preparing</button>
+
+<button class="ready">Ready</button>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

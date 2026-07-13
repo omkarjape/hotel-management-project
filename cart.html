@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+padding:40px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+color:#ff6b35;
+margin-bottom:30px;
+}
+
+.cart-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th{
+background:#ff6b35;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+.qty{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.qty button{
+width:30px;
+height:30px;
+border:none;
+background:#ff6b35;
+color:white;
+border-radius:5px;
+cursor:pointer;
+font-size:18px;
+}
+
+.summary{
+margin-top:30px;
+width:350px;
+margin-left:auto;
+background:#fff8f4;
+padding:20px;
+border-radius:10px;
+border:1px solid #ffd5c2;
+}
+
+.summary h2{
+margin-bottom:20px;
+color:#ff6b35;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+margin:10px 0;
+}
+
+.total{
+font-size:22px;
+font-weight:bold;
+border-top:2px dashed #aaa;
+padding-top:15px;
+margin-top:15px;
+color:#ff6b35;
+}
+
+.buttons{
+margin-top:30px;
+display:flex;
+justify-content:space-between;
+}
+
+.btn{
+padding:14px 28px;
+text-decoration:none;
+color:white;
+border-radius:8px;
+font-weight:600;
+}
+
+.back{
+background:#666;
+}
+
+.order{
+background:#28a745;
+}
+
+.order:hover{
+background:#218838;
+}
+
+.back:hover{
+background:#444;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🛒 Your Cart</h1>
+
+<div class="cart-box">
+
+<table>
+
+<tr>
+<th>Item</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+</tr>
+
+<tr>
+<td>Margherita Pizza</td>
+<td>₹249</td>
+
+<td>
+
+<div class="qty">
+
+<button>-</button>
+
+<span>2</span>
+
+<button>+</button>
+
+</div>
+
+</td>
+
+<td>₹498</td>
+
+</tr>
+
+<tr>
+
+<td>Cold Coffee</td>
+
+<td>₹99</td>
+
+<td>
+
+<div class="qty">
+
+<button>-</button>
+
+<span>2</span>
+
+<button>+</button>
+
+</div>
+
+</td>
+
+<td>₹198</td>
+
+</tr>
+
+<tr>
+
+<td>Garlic Bread</td>
+
+<td>₹149</td>
+
+<td>
+
+<div class="qty">
+
+<button>-</button>
+
+<span>1</span>
+
+<button>+</button>
+
+</div>
+
+</td>
+
+<td>₹149</td>
+
+</tr>
+
+</table>
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<div class="row">
+<span>Subtotal</span>
+<span>₹845</span>
+</div>
+
+<div class="row">
+<span>GST (5%)</span>
+<span>₹42</span>
+</div>
+
+<div class="row">
+<span>Discount</span>
+<span>-₹25</span>
+</div>
+
+<div class="row total">
+<span>Total</span>
+<span>₹862</span>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<a href="menu.html" class="btn back">
+⬅ Continue Shopping
+</a>
+
+<a href="order-status.html" class="btn order">
+✅ Place Order
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
