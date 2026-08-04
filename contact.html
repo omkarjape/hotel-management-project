@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smart Restaurant</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h2 class="logo">🍽 Smart Restaurant</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="contact-hero">
+    <div class="container contact-intro">
+        <h1>Contact Us</h1>
+        <p>Reach out for reservations, support, or any questions about our smart restaurant experience.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container contact-grid">
+        <div class="form-card">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">Full Name</label>
+                    <input type="text" id="contactName" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" placeholder="Write your message here"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="form-card">
+            <h3>Book an Appointment</h3>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="appName">Full Name</label>
+                    <input type="text" id="appName" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="appEmail">Email Address</label>
+                    <input type="email" id="appEmail" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="appPhone">Phone Number</label>
+                    <input type="text" id="appPhone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option value="">Select department</option>
+                        <option value="Dining">Dining</option>
+                        <option value="Events">Events</option>
+                        <option value="Support">Support</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appDate">Date</label>
+                    <input type="date" id="appDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="appTime">Time</label>
+                    <input type="time" id="appTime">
+                </div>
+
+                <div class="form-group">
+                    <label for="problem">Problem / Request</label>
+                    <textarea id="problem" placeholder="Describe your request"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Smart Restaurant Ordering System</p>
+</footer>
+
+<script src="js/contact.js"></script>
+
+</body>
+</html>
