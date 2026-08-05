@@ -139,6 +139,14 @@ Monitor every table and order from the counter.
 
 </section>
 
+<section class="api-section">
+    <div class="container api-card">
+        <h2>Today's Featured Dishes</h2>
+        <button id="api-btn" class="btn">Load Menu Items</button>
+        <div id="api-data" class="api-data"></div>
+    </div>
+</section>
+
 <footer>
 
 <p>
@@ -147,5 +155,43 @@ Monitor every table and order from the counter.
 
 </footer>
 
+<script>
+    document.getElementById("api-btn").addEventListener("click", async () => {
+        const dataEl = document.getElementById("api-data");
+        dataEl.innerHTML = "<p class='loading'>Loading menu...</p>";
+
+        try {
+            const response = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=salad");
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            const meals = result.meals || [];
+
+            if (!meals.length) {
+                dataEl.innerHTML = "<p>No dishes found.</p>";
+                return;
+            }
+
+            let output = "<div class='api-grid'>";
+            meals.slice(0, 6).forEach((meal) => {
+                output += `
+                    <div class="api-card-item">
+                        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                        <h3>${meal.strMeal}</h3>
+                        <p>${meal.strCategory} · ${meal.strArea}</p>
+                    </div>
+                `;
+            });
+            output += "</div>";
+            dataEl.innerHTML = output;
+
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            dataEl.innerHTML = "<p class='error'>Failed to load menu. Please try again later.</p>";
+        }
+    });
+</script>
 </body>
 </html>

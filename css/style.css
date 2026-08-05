@@ -189,6 +189,66 @@ footer{
     padding:25px;
 }
 
+.api-section{
+    padding:70px 8%;
+    background:#fff9f4;
+}
+
+.api-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.api-card h2{
+    color:#ff6b35;
+    margin-bottom:22px;
+}
+
+.api-data{
+    margin-top:30px;
+}
+
+.api-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.api-card-item{
+    background:#fff;
+    padding:18px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    text-align:center;
+}
+
+.api-card-item img{
+    width:100%;
+    border-radius:16px;
+    height:180px;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.api-card-item h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.api-card-item p{
+    color:#666;
+    font-size:15px;
+}
+
+.loading,
+.error{
+    color:#333;
+    font-size:16px;
+}
+
 /* Contact Page */
 
 .contact-hero{
